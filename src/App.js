@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 
-import { MuiThemeProvider, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
-import theme from './theme';
-
-import NavBar from './components/NavBar';
+import Main from './components/Main';
 import SideBar from './components/SideBar';
 
 import './index.css';
@@ -12,6 +10,7 @@ import './index.css';
 const styles = theme => ({
   root: {
     height: '100%',
+    display: 'flex',
   },
 });
 
@@ -20,12 +19,10 @@ class App extends Component {
     const { classes } = this.props;
     
     return (
-      <MuiThemeProvider theme={theme}>
-        <div className={classes.root}>
-          <NavBar />
-          <SideBar />
-        </div>
-      </MuiThemeProvider>
+      <div className={classes.root}>
+        <SideBar />
+        <Main />
+      </div>
     );
   }
 }

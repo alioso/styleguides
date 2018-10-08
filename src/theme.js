@@ -3,6 +3,7 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 
 const primaryColors = {
   main: '#3683DC',
+  green: '#4FAF63',
   light: '#4D99F1',
   dark: '#2466B3',
   text: '#606469',
@@ -18,7 +19,6 @@ const themeDefaults = {
       main: primaryColors.main,
     },
   },
-  drawerWidth: 240,
 };
 
 export default createMuiTheme(themeDefaults);
