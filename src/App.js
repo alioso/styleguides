@@ -1,28 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { MuiThemeProvider, withStyles } from '@material-ui/core/styles';
+
+import theme from './theme';
+
+import NavBar from './components/NavBar';
+import SideBar from './components/SideBar';
+
+import './index.css';
+
+const styles = theme => ({
+  root: {
+    height: '100%',
+  },
+});
 
 class App extends Component {
   render() {
+    const { classes } = this.props;
+    
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <MuiThemeProvider theme={theme}>
+        <div className={classes.root}>
+          <NavBar />
+          <SideBar />
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
 
-export default App;
+export default withStyles(styles)(App);
