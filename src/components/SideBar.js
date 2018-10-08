@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 import { MuiThemeProvider, withStyles } from '@material-ui/core/styles';
@@ -25,14 +25,19 @@ const styles = theme => ({
     backgroundColor: '#333',
   },
   menu: {},
+  menuItem: {
+    padding: 0,
+    height: 'auto',
+  },
   menuLink: {
     color: 'white',
     textDecoration: 'none',
-    position: 'absolute',
+    padding: theme.spacing.unit * 2,
+    display: 'block',
     width: '100%',
-    height: '100%',
-    left: theme.spacing.unit * 2,
-    top: 12,
+    '&.active': {
+      color: '#4FAF63'
+    },
   },
   content: {
     flexGrow: 1,
@@ -41,7 +46,8 @@ const styles = theme => ({
     minWidth: 0, // So the Typography noWrap works
   },
   title: {
-    color: '#4FAF63',
+    color: 'white',
+    fontWeight: 700,
     padding: theme.spacing.unit * 2,
   },
   logo: {
@@ -70,9 +76,25 @@ class ClippedDrawer extends Component {
           <Typography variant="title" className={classes.title}>StyleGuides</Typography>
           <MenuList className={classes.menu}>
             <Divider />
-            <MenuItem className={classes.menuItem}><Link className={classes.menuLink} to='/base-theme'>Base Theme</Link></MenuItem>
+            <MenuItem className={classes.menuItem}>
+              <NavLink
+                className={classes.menuLink}
+                to='/base-theme'
+                activeClassName="active"
+              >
+                Base Theme
+              </NavLink>
+            </MenuItem>
             <Divider />
-            <MenuItem className={classes.menuItem}><Link className={classes.menuLink} to='/manager'>Manager</Link></MenuItem>
+            <MenuItem className={classes.menuItem}>
+              <NavLink
+                className={classes.menuLink}
+                to='/manager'
+                activeClassName="active"
+              >
+                Manager
+              </NavLink>
+            </MenuItem>
             <Divider />
           </MenuList>
           </Drawer>

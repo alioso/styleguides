@@ -3,19 +3,21 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
-  root: {},
+  root: {
+    padding: 32,
+  },
 });
 
-class Manager extends Component {
+class BaseTheme extends Component {
   render () {
     const { classes } = this.props;
 
     return(
       <div className={classes.root}>
-        Import manager stuff here
+        A grid here perhaps
       </div>
     )
   }
 }
 
-export default  withStyles(styles)(Manager);
+export default  withStyles(styles)(BaseTheme);

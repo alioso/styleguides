@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 import BaseTheme from '../guides/BaseTheme';
+import Default from './Default';
 import Manager from '../guides/Manager';
 
 const styles = theme => ({
@@ -20,7 +20,7 @@ class Main extends Component {
     return(
       <div className={classes.root}>
          <Switch>
-          <Route exact path='/' component={BaseTheme}/>
+          <Route exact path='/' component={Default}/>
           <Route path='/base-theme' component={BaseTheme}/>
           <Route path='/manager' component={Manager}/>
         </Switch>
