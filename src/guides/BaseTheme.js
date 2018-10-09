@@ -3,7 +3,8 @@ import Pattern from "react-patterns";
 import ShadowDOM from 'react-shadow';
 
 import { withStyles } from '@material-ui/core/styles';
-// import '../imports/linode-hugo-theme/static/assets/css/main.css';
+
+const ResetStyles = `@import url('https://fonts.googleapis.com/css?family=Lato:400,700')`;
 
 const styles = theme => ({
   root: {
@@ -16,7 +17,7 @@ class BaseTheme extends Component {
     const { classes } = this.props;
 
     return(
-      <ShadowDOM include={['./themes/linode-hugo-theme/static/assets/css/main.css']}>
+      <ShadowDOM nodeName="div" include={['./themes/linode-hugo-theme/static/assets/css/main.css']}>
         <div className={classes.root}>
           <Pattern>
             <h1>My Heading 1</h1>
@@ -24,7 +25,8 @@ class BaseTheme extends Component {
           <Pattern>
             <button className="btn">Yo</button>
           </Pattern>
-          </div>
+          <style type="text/css">{ResetStyles}</style>
+        </div>
       </ShadowDOM>
     )
   }
