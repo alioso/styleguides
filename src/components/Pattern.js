@@ -11,11 +11,11 @@ const styles = theme => ({
 
 class Pattern extends Component {
   render () {
-    const { classes, code, label } = this.props;
+    const { code, label } = this.props;
 
     return(
       <div
-        className={classes.root}
+        className="pattern"
         code={code}
         label={label}
       >

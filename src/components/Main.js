@@ -9,8 +9,10 @@ import Manager from '../guides/Manager';
 
 const styles = theme => ({
   root: {
-    padding: 32,
+    padding: theme.spacing.unit * 4,
     flex: 1,
+    marginLeft: 240,
+    width: `calc(100% - (240px + ${theme.spacing.unit * 8}px))`,
   },
 });
 

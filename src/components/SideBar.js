@@ -20,7 +20,7 @@ const styles = theme => ({
     display: 'flex',
   },
   drawerPaper: {
-    position: 'relative',
+    position: 'fixed',
     width: 240,
     backgroundColor: '#333',
   },

@@ -10,12 +10,21 @@ const styles = theme => ({
 
 const Resets = `
   .styleguide-header {
-    padding-bottom: 24px;
+    padding-bottom: 16px;
     border-bottom: 2px solid #eee;
     font-weight: normal;
+    color: #4FAF63;
+  }
+  .pattern {
+    padding: 16px 32px;
+    background-color: white;
   }
   .code {
-    padding: 8px 16px !important;
+    padding: 12px 16px !important;
+    font-size: 16px;
+    border: 1px solid #eee;
+    max-width: 100%;
+    background-color: #f9f9f9 !important;
   }`;
 
 class ShadowPattern extends Component {
@@ -26,6 +35,7 @@ class ShadowPattern extends Component {
       <ShadowDOM
         nodeName="div"
         font={font}
+        className="POO"
         {...props}
       >
         <div className={classes.root}>
