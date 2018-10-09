@@ -19,6 +19,11 @@ const themeDefaults = {
       main: primaryColors.main,
     },
   },
+  typography: {
+    title: {
+      // borderBottom: '2px solid #000',
+    },
+  },
 };
 
 export default createMuiTheme(themeDefaults);

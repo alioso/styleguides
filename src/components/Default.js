@@ -8,7 +8,7 @@ const styles = theme => ({
   },
 });
 
-class BaseTheme extends Component {
+class Default extends Component {
   render () {
     const { classes } = this.props;
 
@@ -20,4 +20,4 @@ class BaseTheme extends Component {
   }
 }
 
-export default  withStyles(styles)(BaseTheme);
+export default  withStyles(styles)(Default);

@@ -10,6 +10,7 @@ import Manager from '../guides/Manager';
 const styles = theme => ({
   root: {
     padding: 32,
+    flex: 1,
   },
 });
 
