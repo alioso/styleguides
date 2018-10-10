@@ -49,13 +49,19 @@ const styles = theme => ({
 class ClippedDrawer extends Component {
 
   render() {
-    const { classes, open } = this.props;
+    const { classes, onClose } = this.props;
 
     return (
       <MuiThemeProvider theme={theme}>
         <div className={classes.root}>
           <div className={classes.logo}>
-            <a href="/"><Logo /></a>
+            <NavLink
+              to='/'
+              activeClassName="active"
+              onClick={onClose}
+            >
+              <Logo />
+            </NavLink>
           </div>
           <Typography variant="title" className={classes.title}>StyleGuides</Typography>
           <MenuList className={classes.menu}>
@@ -65,6 +71,7 @@ class ClippedDrawer extends Component {
                 className={classes.menuLink}
                 to='/base-theme'
                 activeClassName="active"
+                onClick={onClose}
               >
                 Base Theme
               </NavLink>
@@ -75,6 +82,7 @@ class ClippedDrawer extends Component {
                 className={classes.menuLink}
                 to='/manager'
                 activeClassName="active"
+                onClick={onClose}
               >
                 Manager
               </NavLink>

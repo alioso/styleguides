@@ -5,7 +5,8 @@ import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
 import { withStyles } from '@material-ui/core/styles';
 
-// import MenuIcon from '@material-ui/icons/MenuIcon';
+import Menu from '@material-ui/icons/Menu';
+import Close from '@material-ui/icons/Close';
 
 import Main from './components/Main';
 import SideBar from './components/SideBar';
@@ -29,7 +30,12 @@ const styles = theme => ({
   },
   navIconOpen: {
     position: 'absolute',
-  }
+  },
+  navIconClose: {
+    width: 50,
+    color: 'white',
+    alignSelf: 'flex-start',
+  },
 });
 
 class App extends Component {
@@ -54,7 +60,7 @@ class App extends Component {
             onClick={this.handleDrawerToggle}
             className={classes.navIconOpen}
           >
-            open
+            <Menu />
           </IconButton>
           <Drawer
             variant="temporary"
@@ -70,9 +76,12 @@ class App extends Component {
               onClick={this.handleDrawerToggle}
               className={classes.navIconClose}
             >
-            close
+              <Close />
             </IconButton>
-            <SideBar open={mobileOpen} />
+            <SideBar 
+              open={mobileOpen}
+              onClose={this.handleDrawerToggle}
+            />
           </Drawer>
         </Hidden>
         <Hidden smDown>

@@ -9,10 +9,11 @@ import Manager from '../guides/Manager';
 
 const styles = theme => ({
   root: {
-    padding: theme.spacing.unit * 4,
+    padding: `${theme.spacing.unit * 4}px ${theme.spacing.unit * 2}px`,
     flex: 1,
     width: `calc(100% - ${theme.spacing.unit * 8}px)`,
     [theme.breakpoints.up('md')]: {
+      padding: theme.spacing.unit * 4,
       marginLeft: 240,
       width: `calc(100% - (240px + ${theme.spacing.unit * 8}px))`,
     },
