@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { MuiThemeProvider, withStyles } from '@material-ui/core/styles';
 import theme from '../theme';
 
-import Drawer from '@material-ui/core/Drawer';
 import Divider from '@material-ui/core/Divider';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
@@ -14,16 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import Logo from './Logo';
 
 const styles = theme => ({
-  root: {
-    height: '100%',
-    overflow: 'hidden',
-    display: 'flex',
-  },
-  drawerPaper: {
-    position: 'fixed',
-    width: 240,
-    backgroundColor: '#333',
-  },
+  root: {},
   menu: {},
   menuItem: {
     padding: 0,
@@ -59,17 +49,11 @@ const styles = theme => ({
 class ClippedDrawer extends Component {
 
   render() {
-    const { classes } = this.props;
+    const { classes, open } = this.props;
 
     return (
       <MuiThemeProvider theme={theme}>
         <div className={classes.root}>
-          <Drawer
-            variant="permanent"
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-          >
           <div className={classes.logo}>
             <a href="/"><Logo /></a>
           </div>
@@ -97,7 +81,6 @@ class ClippedDrawer extends Component {
             </MenuItem>
             <Divider />
           </MenuList>
-          </Drawer>
         </div>
       </MuiThemeProvider>
     );

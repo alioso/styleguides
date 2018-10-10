@@ -11,8 +11,11 @@ const styles = theme => ({
   root: {
     padding: theme.spacing.unit * 4,
     flex: 1,
-    marginLeft: 240,
-    width: `calc(100% - (240px + ${theme.spacing.unit * 8}px))`,
+    width: `calc(100% - ${theme.spacing.unit * 8}px)`,
+    [theme.breakpoints.up('md')]: {
+      marginLeft: 240,
+      width: `calc(100% - (240px + ${theme.spacing.unit * 8}px))`,
+    },
   },
 });
 
