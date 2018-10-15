@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { withStyles } from '@material-ui/core/styles';
 
-import Pattern from './Pattern';
+import Pattern from '../Pattern';
 
 const styles = theme => ({
   root: {},
