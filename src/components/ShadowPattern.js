@@ -25,7 +25,45 @@ const Resets = `
     border: 1px solid #eee;
     max-width: 100%;
     background-color: #f9f9f9 !important;
-  }`;
+  }
+  .swatch-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 20px 0;
+  }
+  .swatch {
+    flex-basis: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .swatch-inner {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    outline: 1px solid #ccc;
+    outline-offset: -10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swatch-text {
+    font-size: 14px;
+    background-color: white;
+    padding: 2px;
+  }
+  .swatch-class {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #999;
+    position: relative;
+    top: -20px;
+  }
+  `;
 
 class ShadowPattern extends Component {
   render () {

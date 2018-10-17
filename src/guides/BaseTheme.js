@@ -6,7 +6,7 @@ import ShadowPattern from '../components/ShadowPattern';
 import Colors from '../components/patterns/Colors';
 import Typographies from '../components/patterns/Typographies';
 
-const poo = require('../themes/linode-hugo-theme/static/assets/css/main.css').toString();
+import { colors } from '../../public/themes/linode-hugo-theme/tailwind';
 
 const styles = theme => ({
   root: {},
@@ -21,8 +21,7 @@ class BaseTheme extends Component {
         include={['./themes/linode-hugo-theme/static/assets/css/main.css']}
         font={'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600'}
       >
-        poo: {poo}
-        {/* <Colors css={poo} /> */}
+        <Colors colors={colors} />
         <Typographies />
       </ShadowPattern>
     )
