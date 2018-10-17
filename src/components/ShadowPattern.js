@@ -19,6 +19,9 @@ const Resets = `
     padding: 16px 32px;
     background-color: white;
   }
+  .pattern > div:first-child {
+    margin-top: 10px;
+  }
   .code {
     padding: 12px 16px !important;
     font-size: 16px;
@@ -73,7 +76,6 @@ class ShadowPattern extends Component {
       <ShadowDOM
         nodeName="div"
         font={font}
-        className="POO"
         {...props}
       >
         <div className={classes.root}>

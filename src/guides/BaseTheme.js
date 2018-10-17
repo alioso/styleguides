@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 import { withStyles } from '@material-ui/core/styles';
 
-import ShadowPattern from '../components/ShadowPattern';
+import Buttons from '../components/patterns/Buttons';
 import Colors from '../components/patterns/Colors';
 import Typographies from '../components/patterns/Typographies';
+import ShadowPattern from '../components/ShadowPattern';
 
 import { colors } from '../../public/themes/linode-hugo-theme/tailwind';
 
@@ -23,6 +24,7 @@ class BaseTheme extends Component {
       >
         <Colors colors={colors} />
         <Typographies />
+        <Buttons />
       </ShadowPattern>
     )
   }

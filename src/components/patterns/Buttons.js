@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { withStyles } from '@material-ui/core/styles';
 
-import Swatch from '../Swatch';
+import Pattern from '../Pattern';
 
 const styles = theme => ({
   root: {},
@@ -11,24 +11,17 @@ const styles = theme => ({
 class Colors extends Component {
 
   render () {
-    const { classes, intro, colors } = this.props;
-
-    const swatches = [];
-    Object.entries(colors).forEach(([key, color]) => {
-        swatches.push(<Swatch key={key} styleName={key} color={color} />)
-      }
-    )
+    const { classes, intro } = this.props;
 
     return (
-      <div
-        className={classes.root}
-      >
+      <div>
         {intro}
-        <h2 className="styleguide-section-header">Colors</h2>
-        <h3 className="styleguide-header">Swatches</h3>
-        <div className="swatch-container">
-          {swatches}
-        </div>
+        <h2 className="styleguide-section-header">Call to Actions</h2>
+        <h3 className="styleguide-header">Buttons</h3>
+        <Pattern code={`<button class="btn">Regular Button</button>`} />
+        <Pattern code={`<button class="btn btn-sm">Small Button</button>`} />
+        <h3 className="styleguide-header">Links</h3>
+        <Pattern code={`<p>This is a <a href="#">normal link</a> within a paragraph.</p>`} />
       </div>
     )
   }
