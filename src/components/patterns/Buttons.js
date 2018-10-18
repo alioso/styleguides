@@ -19,7 +19,8 @@ class Colors extends Component {
         <h2 className="styleguide-section-header">Call to Actions</h2>
         <h3 className="styleguide-header">Buttons</h3>
         <Pattern code={`<button class="btn">Regular Button</button>`} />
-        <Pattern code={`<button class="btn btn-sm">Small Button</button>`} />
+        <Pattern code={`<button class="btn" disabled>Disabled Button</button>`} />
+        <Pattern code={`<button class="btn btn-small">Small Button</button>`} />
         <h3 className="styleguide-header">Links</h3>
         <Pattern code={`<p>This is a <a href="#">normal link</a> within a paragraph.</p>`} />
       </div>
